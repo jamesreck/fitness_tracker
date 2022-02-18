@@ -1,0 +1,79 @@
+---
+:admin: !ruby/string:BCrypt::Password
+  str: "$2a$12$zaJmAVWyHOw9bPuINHTLWOYOjraj./hof1i1eI8xr1WHNpGrWqspW"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$zaJmAVWyHOw9bPuINHTLWO"
+  checksum: YOjraj./hof1i1eI8xr1WHNpGrWqspW
+:james: !ruby/string:BCrypt::Password
+  str: "$2a$12$vznrly7dPpxqy3vpYOjPOOxOVuG/.NGebdWzwnt5kbLzfvcjqcjHu"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$vznrly7dPpxqy3vpYOjPOO"
+  checksum: xOVuG/.NGebdWzwnt5kbLzfvcjqcjHu
+:testuser1: !ruby/string:BCrypt::Password
+  str: "$2a$12$5kRraKZSIrPDMFB9Tk6H1eL8pr.W..2xx94WxhEthn3KpEydMhP.S"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$5kRraKZSIrPDMFB9Tk6H1e"
+  checksum: L8pr.W..2xx94WxhEthn3KpEydMhP.S
+:testuser2: !ruby/string:BCrypt::Password
+  str: "$2a$12$LpVd/P0rYnwQITq7BNCIUetZK29dpzwiB07pyCjiICBU419Gv8VMS"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$LpVd/P0rYnwQITq7BNCIUe"
+  checksum: tZK29dpzwiB07pyCjiICBU419Gv8VMS
+:Arnold: !ruby/string:BCrypt::Password
+  str: "$2a$12$Rp8qtlz4qkZk13WMKkZNuekGWD/iR/DUYe3KKmaEa5UfBoF/2oWa."
+  version: 2a
+  cost: 12
+  salt: "$2a$12$Rp8qtlz4qkZk13WMKkZNue"
+  checksum: kGWD/iR/DUYe3KKmaEa5UfBoF/2oWa.
+:Steve: !ruby/string:BCrypt::Password
+  str: "$2a$12$KcuX9Jjn2x60EAc6QUFfaetF3q4XXh106Vsq99Rkt0XhykQdvlPWy"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$KcuX9Jjn2x60EAc6QUFfae"
+  checksum: tF3q4XXh106Vsq99Rkt0XhykQdvlPWy
+:Jason: !ruby/string:BCrypt::Password
+  str: "$2a$12$KZnVUGqO3U/qNQdtCdrdMuhE0hIjNQx74zB2O5wT7dFjk.GRP7.zC"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$KZnVUGqO3U/qNQdtCdrdMu"
+  checksum: hE0hIjNQx74zB2O5wT7dFjk.GRP7.zC
+:Larry: !ruby/string:BCrypt::Password
+  str: "$2a$12$lTmpWbXUGI6G2JLirNn0/.cQdzbVQutAGuzeS5Wx5EmwIbZqQx9li"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$lTmpWbXUGI6G2JLirNn0/."
+  checksum: cQdzbVQutAGuzeS5Wx5EmwIbZqQx9li
+:TEST: !ruby/string:BCrypt::Password
+  str: "$2a$12$N6INm8pUl72AdZ9KqXFl8emLkKAoXdozts3N1djNSfgwjkc1K0jf2"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$N6INm8pUl72AdZ9KqXFl8e"
+  checksum: mLkKAoXdozts3N1djNSfgwjkc1K0jf2
+:Greg: !ruby/string:BCrypt::Password
+  str: "$2a$12$jjT6Uj8KiUnGQe5Xpe35oOEJBu6Nk3d3nXhT3rr9y8vvQbdffeIbW"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$jjT6Uj8KiUnGQe5Xpe35oO"
+  checksum: EJBu6Nk3d3nXhT3rr9y8vvQbdffeIbW
+:Bruce: !ruby/string:BCrypt::Password
+  str: "$2a$12$hm0WVZQnN/cD9VXjstWQ6eGXH5DyfMdWyZTJPzBDeGykNs7.HwrdG"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$hm0WVZQnN/cD9VXjstWQ6e"
+  checksum: GXH5DyfMdWyZTJPzBDeGykNs7.HwrdG
+:Deborah: !ruby/string:BCrypt::Password
+  str: "$2a$12$MEwKmCn.f4qRjK1AZllJSuLYPq0BYVhPAxPjntG6nTA4kTbczK.HO"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$MEwKmCn.f4qRjK1AZllJSu"
+  checksum: LYPq0BYVhPAxPjntG6nTA4kTbczK.HO
+:Bob: !ruby/string:BCrypt::Password
+  str: "$2a$12$d1VFEZzoVgu9rh3.AP7Dhed0IpRg.dozDmTn8Q2WRhCJjXiv0deM."
+  version: 2a
+  cost: 12
+  salt: "$2a$12$d1VFEZzoVgu9rh3.AP7Dhe"
+  checksum: d0IpRg.dozDmTn8Q2WRhCJjXiv0deM.

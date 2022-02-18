@@ -1,0 +1,7 @@
+<h1>Workout for <%= Time.new.strftime("%m/%d/%y") %></h1>
+<% if @user_data[:workouts][today].nil? %>
+  <a href="/create">Start New Workout</a>
+<% else %>
+  
+<div>
+</div>

@@ -1,0 +1,31 @@
+--- !ruby/object:User
+username: :testuser2
+workouts:
+  '2022-02-18':
+    Bench Press: !ruby/object:Exercise
+      name: Bench Press
+      sets:
+      - '10': '200'
+      - '10': '200'
+      - '10': '150'
+    Overhead Press: !ruby/object:Exercise
+      name: Overhead Press
+      sets:
+      - '5': '150'
+    Barbell Row: !ruby/object:Exercise
+      name: Barbell Row
+      sets:
+      - '10': '200'
+    Pushup: !ruby/object:Exercise
+      name: Pushup
+      sets:
+      - '10': '175'
+    Pullup: !ruby/object:Exercise
+      name: Pullup
+      sets:
+      - '10': '175'
+    Lat Pulldown: !ruby/object:Exercise
+      name: Lat Pulldown
+      sets:
+      - '10': '100'
+exercises: []

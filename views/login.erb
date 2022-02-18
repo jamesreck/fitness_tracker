@@ -1,0 +1,27 @@
+<h3>Sign In</h3>
+<form id="login" action="/login" method="post">
+  <label for="username">Username:</label>
+  <input id="username" name="username" type="text" value="<%= params[:username] %>" />
+  <br>
+  <label for="password">Password:</label>
+  <input id="password" name="password" type="password">
+  <br>
+  <button type="submit">Sign In</button>
+</form>
+
+<br>
+<br>
+
+<h3>Register</h3>
+<form id="register" action="/register" method="post">
+  <label for="new_username">Username:</label>
+  <input id="new_username" name="new_username" type="text" value="<%= params[:new_username] %>" />
+  <br>
+  <label for="new_user_password">Password:</label>
+  <input id="new_user_password" name="new_user_password" type="password">
+  <br>
+  <label for="new_user_password_reenter">Re-Enter Password:</label>
+  <input id="new_user_password_reenter" name="new_user_password_reenter" type="password">
+  <br>
+  <button type="submit">Register</button>
+</form>

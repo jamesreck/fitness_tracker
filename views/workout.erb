@@ -1,0 +1,31 @@
+<header>
+  <h1>Workout for <%= @date %></h1>
+</header>
+
+<body>
+  <% if !!@user.workouts[@date] %>
+    <div class="row">
+      <% @user.workouts[@date].each do |name, data| %>
+        <div class="column">
+          <div class="card">
+            <h3><%= name %></h3>
+            <% data.sets.each do |set| %>
+              <% set.each do |reps, weight| %>
+                <p><%= weight %> lbs X <%= reps %></p>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</body>
+
+<footer>
+  <a href="/workout/<%= yesterday(@date) %>">Yesterday</a>
+  <a href="/workout/<%= tomorrow(@date) %>">Tomorrow</a>
+  <br>
+  <br>
+  <a href="/create/<%= @date %>">Add new exercise</a>
+  <br>
+</footer>

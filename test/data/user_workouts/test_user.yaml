@@ -1,0 +1,4 @@
+--- !ruby/object:User
+username: :test_user
+workouts: {}
+exercises: []

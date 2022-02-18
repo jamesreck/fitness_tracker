@@ -1,0 +1,20 @@
+--- !ruby/object:User
+username: :admin
+workouts:
+  '2022-02-18':
+    Bench Press: !ruby/object:Exercise
+      name: Bench Press
+      sets:
+      - '10': '200'
+      - '10': '200'
+      - '10': '200'
+      - '10': '200'
+      - '10': '200'
+      - '10': '200'
+      - '10': '200'
+      - '10': '200'
+      - '10': '200'
+      - '10': '200'
+      - '10': '200'
+      - '10': '200'
+exercises: []
