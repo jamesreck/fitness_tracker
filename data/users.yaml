@@ -77,3 +77,15 @@
   cost: 12
   salt: "$2a$12$d1VFEZzoVgu9rh3.AP7Dhe"
   checksum: d0IpRg.dozDmTn8Q2WRhCJjXiv0deM.
+:arnold: !ruby/string:BCrypt::Password
+  str: "$2a$12$0GPs.NIt1neCNLcA.Bxgp.Jx6J.pkxlmyeggIj2fBKkOOHeYitGmC"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$0GPs.NIt1neCNLcA.Bxgp."
+  checksum: Jx6J.pkxlmyeggIj2fBKkOOHeYitGmC
+:gregory: !ruby/string:BCrypt::Password
+  str: "$2a$12$yHHP534vV.Aa8U2MqXzSDOGZ4ZlRXXYxqD6QCUZkHLl/EbKeabC2e"
+  version: 2a
+  cost: 12
+  salt: "$2a$12$yHHP534vV.Aa8U2MqXzSDO"
+  checksum: GZ4ZlRXXYxqD6QCUZkHLl/EbKeabC2e

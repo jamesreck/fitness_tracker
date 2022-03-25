@@ -3,22 +3,39 @@
 </header>
 
 <body>
-  <% if !!@user.workouts[@date] %>
-    <div class="row">
-      <% @user.workouts[@date].each do |name, data| %>
-        <div class="column">
-          <div class="card">
-            <h3><%= name %></h3>
-            <% data.sets.each do |set| %>
-              <% set.each do |reps, weight| %>
-                <p><%= weight %> lbs X <%= reps %></p>
-              <% end %>
+  <div class="row">
+    <% @exercises.each do |name, data_array| %>
+      <div class="column">
+        <div class="card">
+          <h3><%= name %></h3>
+          <% data_array.each do |set| %>
+            <% set.each do |weight, reps| %>
+              <p><%= weight %> lbs X <%= reps %></p>
             <% end %>
-          </div>
+          <% end %>
+          
+          <form action="/create/<%= @date %>" method="post">
+            <div>
+              <input id="date" name="date" type="hidden" value="<%= @date %>">
+            </div>
+            <div>
+              <input id="exercise" name="exercise" type="hidden" value="<%= name %>">
+            </div>
+            <div>
+              <label for="reps">Reps</label>
+              <input id="reps" name="reps" type="number" min="0">
+            </div>
+            <div>
+              <label for="weight">Weight</label>
+              <input id="weight" name="weight" type="number" min="0" step="2.5">
+            </div>
+            <button type="submit">Add Set</button>
+          </form>
+
         </div>
-      <% end %>
-    </div>
-  <% end %>
+      </div>
+    <% end %>
+  </div>
 </body>
 
 <footer>

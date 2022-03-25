@@ -2,6 +2,7 @@ require "yaml"
 require "bcrypt"
 
 require_relative "./user"
+require_relative "./database_persistence"
 
 def data_path
   if ENV["RACK_ENV"] == "test"
@@ -11,25 +12,8 @@ def data_path
   end
 end
 
-def data_path_for(username)
-  data_path + "/user_workouts/" + username + ".yaml"
-end
-
-def add_to_yaml(file_path, hash)
-  data = YAML.load_file(file_path)
-  data = !!data ? data.merge(hash) : hash
-  File.open(file_path, "w") { |file| file.write(data.to_yaml) }
-end
-
 def encrypt(password)
   BCrypt::Password.create(password)
-end
-
-def register_new_user(username, plaintext_password)
-  new_user_credentials = { username.to_sym => encrypt(plaintext_password) }
-  add_to_yaml(data_path + "/users.yaml", new_user_credentials)
-  new_user = User.new(username.to_sym)
-  create_new_user_file(username, new_user)
 end
 
 def load_user_credentials
@@ -39,10 +23,6 @@ def load_user_credentials
     File.expand_path("../data/users.yaml", __FILE__)
   end
   YAML.load_file(credentials_path)
-end
-
-def load_user_file(username)
-  YAML.load_file(data_path_for(username))
 end
 
 def tomorrow(date_string)
@@ -57,22 +37,21 @@ def yesterday(date_string)
   date_array.join('-')
 end
 
+def fetch_exercises_for(user_id, date)
+  sql = <<~SQL 
+    SELECT * FROM workouts
+    WHERE user_id = $1
+    AND exercise_date = $2;
+  SQL
+  result = query(sql, user_id, date)
+  exercises = {}
+  result.each do |tuple|
+    puts tuple
+  end
+end
 
-james = User.new("jamesreckinger")
-james.add_new_workout
-james.add_exercise_to_workout("2022-02-18", "Bench Press")
-james.workouts["2022-02-18"]["Bench Press"].add_new_set(10, 150)
-james.workouts["2022-02-18"]["Bench Press"].add_new_set(10, 150)
-james.workouts["2022-02-18"]["Bench Press"].add_new_set(10, 150)
-james.workouts["2022-02-18"]["Bench Press"].add_new_set(10, 150)
-james.add_exercise_to_workout("2022-02-18", "Overhead Press")
-james.workouts["2022-02-18"]["Overhead Press"].add_new_set(10, 125)
-james.add_new_exercise_to_list("Bench Press")
-james.add_new_exercise_to_list("Overhead Press")
+@storage = DatabasePersistence.new(true)
+@storage.fetch_exercises_for('james', '2022-03-25')
 
-puts james.workouts["2022-02-18"]
-
-puts tomorrow("2022-02-18")
-puts yesterday("2022-02-18")
 
 
